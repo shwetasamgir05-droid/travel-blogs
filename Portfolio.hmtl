@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>my Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+    <style>
+         :root {
+            --gold: linear-gradient(135deg, #d4af37, #f5e6a8);
+            --dark: #0b0b0e;
+            --glass: rgba(255, 255, 255, 0.08);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: radial-gradient(circle at top, #111, #000);
+            color: white;
+            overflow-x: hidden;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            background: var(--gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: fadeDown 1.5s ease;
+        }
+        
+        .hero p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+            opacity: 0.8;
+            animation: fadeUp 2s ease;
+        }
+        
+        .scroll {
+            position: absolute;
+            bottom: 30px;
+            opacity: 0.6;
+        }
+        
+        .section {
+            padding: 120px 10%;
+        }
+        
+        .glass {
+            background: var(--glass);
+            backdrop-filter: blur(20px);
+            border-radius: 25px;
+            padding: 60px;
+            box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6);
+        }
+        
+        .about h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            margin-bottom: 20px;
+        }
+        
+        .about p {
+            line-height: 1.9;
+            opacity: 0.85;
+        }
+        
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+        
+        .skill {
+            padding: 30px;
+            border-radius: 20px;
+            background: linear-gradient(145deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0.02));
+            transition: transform 0.5s;
+        }
+        
+        .skill:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+        
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .project {
+            position: relative;
+            overflow: hidden;
+            border-radius: 20px;
+        }
+        
+        .project img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.7s;
+        }
+        
+        .project:hover img {
+            transform: scale(1.15);
+        }
+        
+        .project span {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+            font-weight: 600;
+        }
+        
+        .contact {
+            text-align: center;
+        }
+        
+        .contact a {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 40px;
+            border-radius: 40px;
+            background: var(--gold);
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+            transition: transform 0.4s;
+        }
+        
+        .contact a:hover {
+            transform: scale(1.1);
+        }
+        
+        footer {
+            padding: 40px;
+            text-align: center;
+            opacity: 0.5;
+        }
+        
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="hero">
+        <div>
+            <h1>Shweta Samgir</h1>
+            <p>web Designer • Creative Developer • programmer</p>
+        </div>
+        <div class="scroll">▼ Scroll</div>
+    </section>
+    <section class="section">
+        <div class="glass about">
+            <h2>About Me</h2>
+            <p>
+                I create premium digital experiences that combine elegance, innovation, and performance. My work focuses on luxury aesthetics, cinematic motion, and unforgettable brand identity.
+            </p>
+        </div>
+    </section>
+    <section class="section">
+        <div class="glass">
+            <h2 style="margin-bottom:40px;">Expertise</h2>
+            <div class="skills">
+                <div class="skill">web Design</div>
+                <div class="skill">Creative Development</div>
+                <div class="skill">Brand Identity</div>
+                <div class="skill">Motion & Interaction</div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="glass">
+            <h2 style="margin-bottom:40px;">Selected Work</h2>
+            <div class="projects">
+                <div class="project">
+                    <img src="https://resources.americaneagle.com/aecom-blobs/images/default-source/blog-images/understanding-web-development-frameworks-og-image.jpg?sfvrsn=d289bf2d_1" alt="">
+                    <span>web designer</span>
+                </div>
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
+                    <span>Creative Studio</span>
+                </div>
+                <div class="project">
+                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" alt="">
+                    <span>Digital Experience</span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="section">
+        <div class="glass contact">
+            <h2>Let's Work Together</h2>
+            <p>High-end ideas deserve high-end execution.</p>
+            <a href="shwetasamgie05@example.com">Contact Me</a>
+        </div>
+    </section>
+    <footer>
+        © 2025 Your Name — Crafted with elegance
+    </footer>
+</body>
+
+</html>
